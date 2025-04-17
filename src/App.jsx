@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import InputContrasena from "./componentes/InputContrasena";
 import BarraFortaleza from "./componentes/BarraFortaleza";
-import GeneradorContrasena from "./componentes/GeneradorContrasena";
 import PanelAvanzado from "./componentes/PanelAvanzado";
 import { obtener_fortaleza_contrasena, generar_contrasena } from "./utils";
 import './App.css';
@@ -46,7 +45,7 @@ export default function App() {
   return (
     <div className="contenedor-principal">
       <div className="contenedor-formulario">
-        <h2 className="titulo-formulario">Comprobador de Contraseña</h2>
+        <h2 className="titulo-formulario">COMPROBADOR DE CONTRASEÑA</h2>
 
         <InputContrasena
           contrasena={contrasena}
@@ -58,7 +57,7 @@ export default function App() {
         <BarraFortaleza fortaleza={fortaleza} contrasena={contrasena} />
 
         <button className="boton-panel-avanzado" onClick={togglePanelAvanzado}>
-          {mostrarPanelAvanzado ? 'Ocultar Opciones' : 'Mostrar Opciones Avanzadas'}
+          {mostrarPanelAvanzado ? 'OCULTAR OPCIONES AVANZADAS' : 'MOSTRAR OPCIONES AVANZADAS'}
         </button>
 
         {mostrarPanelAvanzado && (
@@ -80,18 +79,14 @@ export default function App() {
           <button
             onClick={generarNuevaContrasena}
             className="generar-contrasena-boton"
-          >
-            Generar Contraseña
-          </button>
+          >GENERAR CONTRASEÑA</button>
           {contrasenaGenerada && (
             <div className="contrasena-generada-div">
               {contrasenaGenerada}
               <button
                 className="boton-copiar"
                 onClick={copiarAlPortapapeles}
-              >
-                Copiar Contraseña
-              </button>
+              >COPIAR CONTRASEÑA</button>
             </div>
           )}
         </div>

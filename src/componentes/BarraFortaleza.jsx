@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function BarraFortaleza({ fortaleza, contrasena }) {
   const colores = ["rojo", "naranja", "amarillo", "verde-claro", "verde"];
   const textos = [
@@ -10,24 +9,28 @@ export default function BarraFortaleza({ fortaleza, contrasena }) {
     "Muy segura",
   ];
 
+  const indiceFortaleza = Math.min(fortaleza, colores.length - 1); // Evitar desbordamientos
+
   const requisitos = [
     { texto: "Al menos 8 caracteres", cumple: contrasena.length >= 8 },
     { texto: "Al menos 1 letra mayúscula", cumple: /[A-Z]/.test(contrasena) },
     { texto: "Al menos 1 letra minúscula", cumple: /[a-z]/.test(contrasena) },
     { texto: "Al menos 1 número", cumple: /[0-9]/.test(contrasena) },
-    { texto: "Al menos 1 carácter especial", cumple: /[!@#$%^&*().]/.test(contrasena) },
+    {
+      texto: "Al menos 1 carácter especial",
+      cumple: /[!@#$%^&*().]/.test(contrasena),
+    },
   ];
 
   return (
     <>
       <div className="barra-fortaleza-contenedor">
         <div
-          className={`barra-fortaleza-progreso barra-fortaleza-${colores[fortaleza]}`}
-          style={{ width: `${(fortaleza / 4) * 100}%` }}
+          className={`barra-fortaleza-progreso barra-fortaleza-${colores[indiceFortaleza]}`}
+          style={{ width: `${(fortaleza / (colores.length - 1)) * 100}%` }}
         ></div>
       </div>
-      <p className="barra-fortaleza-texto">{textos[fortaleza]}</p>
-
+      <p className="barra-fortaleza-texto">{textos[indiceFortaleza]}</p>
       <ul className="requisitos-lista">
         {requisitos.map((req, index) => (
           <li
