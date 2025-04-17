@@ -1,3 +1,12 @@
+Trabajo Práctico Nº 2 – Desarrollo de Sitio Web Responsivo
+
+Este repositorio contiene el desarrollo del Trabajo Práctico Nº 2 realizado en la materia Desarrollo de Software.
+
+El sitio web se encuentra disponible en GitHub Pages a través del siguiente enlace:
+
+[https://daiana213.github.io/tp2/]
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
