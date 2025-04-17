@@ -64,7 +64,21 @@
   .generar-contrasena-boton:hover {
     background-color: var(--second-bg-color);
   }
+  .mensaje-copiado {
+    color: green;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    animation: fade-in 0.5s ease-out;
+  }
   
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  
   .contrasena-generada-div {
     padding: 8px;
     background-color: lightgray;
