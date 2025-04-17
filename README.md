@@ -1,4 +1,4 @@
-Trabajo Práctico Nº 2 – Desarrollo de Sitio Web Responsivo
+# Trabajo Práctico Nº 2 – Desarrollo de Sitio Web Responsivo
 
 Este repositorio contiene el desarrollo del Trabajo Práctico Nº 2 realizado en la materia Desarrollo de Software.
 
